@@ -13,6 +13,7 @@
         <module>springboot-rabbitmq</module>
         <module>springboot-redis</module>
         <module>springboot-memcached</module>
+        <module>springboot-aop</module>
     </modules>
 
 
