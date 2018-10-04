@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,6 +13,7 @@ import java.util.Date;
  * @version 1.0
  * @since 2018-10-04 20:15
  */
+@Table(name="user")
 public class UserDO implements Serializable {
 
     private static final long serialVersionUID = -8084890616194400066L;
