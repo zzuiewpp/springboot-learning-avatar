@@ -13,6 +13,7 @@ target/
 *.iml
 *.ipr
 *.log
+*.logs
 *.class
 *.md
 ### NetBeans ###
@@ -22,5 +23,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
-README.md

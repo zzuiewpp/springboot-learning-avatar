@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  tomcat:
+    basedir:
+    #accesslog:
+      enabled: true
+
+spring:
+  # MQ conf
+  rabbitmq:
+    user:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+      virtual-host: user
