@@ -13,7 +13,7 @@ import java.util.Date;
  * @version 1.0
  * @since 2018-10-04 20:15
  */
-@Table(name="user")
+@Table(name = "user")
 public class UserDO implements Serializable {
 
     private static final long serialVersionUID = -8084890616194400066L;
@@ -22,6 +22,7 @@ public class UserDO implements Serializable {
     @Setter
     private String id;
 
+    @Column(name = "name")
     @Getter
     @Setter
     private String name;

@@ -35,8 +35,8 @@ public class UserDAO {
             logger.error("the object of UserDO is null, UserDO: {}" + userDO);
             return -1;
         }
-        String sql = "insert into users(name, gender, tel) values(?, ?, ?)";
-        Object[] sqlParams = new Object[]{userDO.getId(), userDO.getClass().getName(), userDO.getGender(), userDO.getTel()};
+        String sql = "insert into users(id, name, gender, tel, utime) values(?, ?, ?, ?, ?)";
+        Object[] sqlParams = new Object[]{userDO.getId(), userDO.getName(), userDO.getGender(), userDO.getTel(), userDO.getUtime()};
         return jdbcTemplate.update(sql, sqlParams);
     }
 
@@ -45,8 +45,8 @@ public class UserDAO {
             logger.error("the object of UserDO is null, UserDO: {}" + userDO);
             return -1;
         }
-        String sql = "update users set name = ?, gernder = ?, tel = ?";
-        Object[] sqpParams = new Object[]{userDO.getClass().getName(), userDO.getGender(), userDO.getTel()};
+        String sql = "update users set name = ?, gernder = ?, tel = ? where id = ?";
+        Object[] sqpParams = new Object[]{userDO.getName(), userDO.getGender(), userDO.getTel(), userDO.getId()};
         return jdbcTemplate.update(sql, sqpParams);
     }
 
