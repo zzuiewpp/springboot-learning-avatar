@@ -9,16 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-mybatis</artifactId>
+    <artifactId>springboot-rpc</artifactId>
 
-    <name>springboot-mybatis</name>
+    <name>springboot-rpc</name>
 
     <dependencies>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.2.0</version>
-
-        </dependency>
+        
     </dependencies>
+
 </project>
