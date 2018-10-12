@@ -15,7 +15,7 @@
         <module>springboot-memcached</module>
         <module>springboot-aop</module>
         <module>springboot-rpc</module>
-        <module>springboot-eureka</module>
+        <module>springboot-eureka-server</module>
     </modules>
 
     <properties>

@@ -10,3 +10,10 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
+management:
+  endpoint:
+    health:
+      show-details: always
+    web:
+      exposure:
+        include: "*"
