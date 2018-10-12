@@ -16,6 +16,8 @@
         <module>springboot-aop</module>
         <module>springboot-rpc</module>
         <module>springboot-eureka-server</module>
+        <module>springboot-eureka-client</module>
+        <module>springboot-eureka-service</module>
     </modules>
 
     <properties>

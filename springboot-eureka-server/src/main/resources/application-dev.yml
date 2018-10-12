@@ -1,6 +1,10 @@
 server:
   port: 8761
 
+spring:
+  application:
+    name: springboot-eureka-server
+
 eureka:
   instance:
     hostname: localhost
@@ -16,4 +20,4 @@ management:
       show-details: always
     web:
       exposure:
-        include: "*"
+      include: "*"
