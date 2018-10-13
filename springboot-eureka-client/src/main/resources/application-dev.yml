@@ -6,11 +6,10 @@ spring:
     name: springboot-eureka-client
 
 eureka:
-  instance:
-    hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      #指定到peer1机器上
+      defaultZone: http://peer1:8761/eureka/
 
 management:
   endpoint:

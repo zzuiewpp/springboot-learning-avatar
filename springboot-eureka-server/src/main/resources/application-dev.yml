@@ -1,19 +1,20 @@
-server:
-  port: 8761
-
-spring:
-  application:
-    name: springboot-eureka-server
-
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
+#server:
+#  port: 8761
+#
+#spring:
+#  application:
+#    name: springboot-eureka-server
+#
+##单个的Eureka Server搭建
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#
 management:
   endpoint:
     health:
@@ -21,3 +22,37 @@ management:
     web:
       exposure:
       include: "*"
+
+
+#高可用的Eureka Server搭建
+#采用多profile格式
+---
+spring:
+  profiles: peer1
+  application:
+    name: springboot-server
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/
+---
+spring:
+  profiles: peer2
+  application:
+    name: springboot-server
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://peer2:8762/eureka/
